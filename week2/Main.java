@@ -1,6 +1,9 @@
 package week2;
 
+import java.util.Scanner;
+
 public class Main {
+	static Scanner in = new Scanner(System.in);
 	public static void main(String[] args) {
 		//1,返回两个数和为target的下标
 		int nums[] = { 2, 6, 3, 2, 3};
@@ -19,5 +22,14 @@ public class Main {
 		System.out.println(OneHundredandTwentyfive.isPalindrome("ab"));
 		//136寻找单独的一个数-6
 		System.out.println(OneHundredandThirtySix.singleNumber(nums));
+		//234
+		ListNode lNode = null,head = null;
+		int ch = in.nextInt();
+		while(ch != 0){
+			lNode.val = ch;
+			lNode.next = head;
+			ch = in.nextInt();
+		}
+		System.out.println(TwoHundredandThirtyfour.isPalindrome(lNode));
 	}
 }

@@ -1,8 +1,11 @@
-import java.util.Hashtable;
+package week2;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class OneHundredandThirtySix {
-    public int singleNumber(int[] nums) {
-        //¶ÔÓÚ¸ºÊıµÄ²»ºÃÓÃ£¬Èç¹ûÖ±½ÓÈ¡¾ø¶ÔÖµÓÖÉæ¼°ÖØ¸´-1ºÍ1£¬ÉáÆú
+    public static int singleNumber(int[] nums) {
+        //å¯¹äºè´Ÿæ•°çš„ä¸å¥½ç”¨ï¼Œå¦‚æœç›´æ¥å–ç»å¯¹å€¼åˆæ¶‰åŠé‡å¤-1å’Œ1ï¼Œèˆå¼ƒ
         /*if(nums.length == 0 || nums == null){  
              return 0;  
          }  
@@ -23,24 +26,24 @@ public class OneHundredandThirtySix {
     		x = x ^ a;
     	}
     	return x;*/
-       Map<Integer, Integer> map = new HashMap<Integer, Integer>();  
-         if(nums.length == 0 || nums == null){  
-             return 0;  
-         }  
-         for(int i=0;i<nums.length;i++){  
-             if(map.containsKey(nums[i])){  
-                 int value = map.get(nums[i]);  
-                 map.put(nums[i], value+1);  
-             }else {  
-                 map.put(nums[i], 1);  
-             }  
-         }  
-         for(int i=0;i<nums.length;i++){
-             int value = map.get(nums[i]);  
-             if(value == 1){  
-                 return nums[i];  
-             }  
-         }  
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		if (nums.length == 0 || nums == null) {
+			return 0;
+		}
+		for (int i = 0; i < nums.length; i++) {
+			if (map.containsKey(nums[i])) {
+				int value = map.get(nums[i]);
+				map.put(nums[i], value + 1);
+			} else {
+				map.put(nums[i], 1);
+			}
+		}
+		for (int i = 0; i < nums.length; i++) {
+			int value = map.get(nums[i]);
+			if (value == 1) {
+				return nums[i];
+			}
+		}
          return 0;
     }
 }
