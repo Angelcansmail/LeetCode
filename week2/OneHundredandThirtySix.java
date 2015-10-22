@@ -2,7 +2,11 @@ package week2;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/*Given an array of integers, every element appears twice except for one. Find that single one.
+ Note:
+ Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+ 1,2,3,2,1,3,-1输出-1
+ */
 public class OneHundredandThirtySix {
     public static int singleNumber(int[] nums) {
         //对于负数的不好用，如果直接取绝对值又涉及重复-1和1，舍弃

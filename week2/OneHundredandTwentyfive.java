@@ -1,7 +1,14 @@
 package week2;
 
 import java.util.Stack;
-
+/*Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+For example,
+ "A man, a plan, a canal: Panama" is a palindrome.
+ "race a car" is not a palindrome. 
+Note:
+ Have you consider that the string might be empty? This is a good question to ask during an interview.
+ For the purpose of this problem, we define empty string as valid palindrome. 
+*/
 public class OneHundredandTwentyfive {
 	public static boolean isPalindrome(String s) {
 		boolean flag = false;
@@ -39,7 +46,7 @@ public class OneHundredandTwentyfive {
 			stack.push(s.charAt(index));
 			index++;
 		}
-	 
+		//奇数个，把中间的压入
 		if (len % 2 == 1)
 			index++;
 	 

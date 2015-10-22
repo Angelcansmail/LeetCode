@@ -1,5 +1,8 @@
 package week2;
-
+/*
+Example1: x = 123, return 321
+Example2: x = -123, return -321 
+*/
 public class Seven {
 	public static int reverse(int x) {
 		/*int res = 0;
